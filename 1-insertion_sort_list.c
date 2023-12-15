@@ -57,8 +57,8 @@ void insertion_sort_list(listint_t **list)
 
 listint_t *head_node(listint_t *temp)
 {
-        while (temp->prev)
-                temp = temp->prev;
+	while (temp->prev)
+		temp = temp->prev;
 
-        return (temp);
+	return (temp);
 }
