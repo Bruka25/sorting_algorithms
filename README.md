@@ -1,4 +1,4 @@
-The following programs are C programs for the project sorting algorithm for the lower level language curriculum, inside it contains the following c functions:
+The following programs are C programs for the project sorting algorithm for the ALX lower level language curriculum, inside it contains the following C functions:
 
 * A function that sorts an array of integers in ascending order using the Bubble sort algorithm
 * A function that sorts a doubly linked list of integers in ascending order using the Insertion sort algorithm
