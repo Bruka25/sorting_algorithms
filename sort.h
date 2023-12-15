@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 
 
@@ -21,7 +22,7 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-
+listint_t *head_node(listint_t *temp);
 void print_list(const listint_t *list);
 void print_array(const int *array, size_t size);
 void bubble_sort(int *array, size_t size);
