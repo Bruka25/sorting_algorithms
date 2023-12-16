@@ -16,7 +16,7 @@ void quick_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 
-	lomuto_sort(array, size, 0, size - 1);
+	lomuto_quick_sort(array, size, 0, size - 1);
 }
 
 /**
@@ -79,7 +79,7 @@ int lomuto_partition(int *array, size_t size, int left, int right)
 }
 
 /**
- *lomuto_sort - Function for solving sorting the partition
+ *lomuto_quick_sort - Function for solving sorting the partition
  *              using recursive call
  *
  *@array: The array to be sorted
@@ -90,14 +90,14 @@ int lomuto_partition(int *array, size_t size, int left, int right)
  *Return: void
  */
 
-void lomuto_sort(int *array, size_t size, int left, int right)
+void lomuto_quick_sort(int *array, size_t size, int left, int right)
 {
 	int partition;
 
 	if (right - left > 0)
 	{
 		partition = lomuto_partition(array, size, left, right);
-		lomuto_sort(array, size, left, partition - 1);
-		lomuto_sort(array, size, partition + 1, right);
+		lomuto_quick_sort(array, size, left, partition - 1);
+		lomuto_quick_sort(array, size, partition + 1, right);
 	}
 }

@@ -39,7 +39,7 @@ void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 void swap_idx(int *idx1, int *idx2);
 int lomuto_partition(int *array, size_t size, int left, int right);
-void lomuto_sort(int *array, size_t size, int left, int right);
+void lomuto_quick_sort(int *array, size_t size, int left, int right);
 
 
 #endif/*SORT_H*/
