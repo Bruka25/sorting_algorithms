@@ -46,5 +46,8 @@ void lomuto_quick_sort(int *array, size_t size, int left, int right);
 /*counting sort function helper*/
 int max_int(int *array, int size);
 
+/*heap sort function helper*/
+void bin_heap(int *array, size_t size, size_t base, size_t root);
+
 
 #endif/*SORT_H*/
