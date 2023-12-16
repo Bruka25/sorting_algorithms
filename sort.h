@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <stdbool.h>
 
 
 
@@ -40,6 +41,10 @@ void quick_sort_hoare(int *array, size_t size);
 void swap_idx(int *idx1, int *idx2);
 int lomuto_partition(int *array, size_t size, int left, int right);
 void lomuto_quick_sort(int *array, size_t size, int left, int right);
+
+/*cocktail sorting functions*/
+void swap_node_next(listint_t **list, listint_t **tail, listint_t **cock_shaker);
+void swap_node_prev(listint_t **list, listint_t **tail, listint_t **cock_shaker);
 
 
 #endif/*SORT_H*/
