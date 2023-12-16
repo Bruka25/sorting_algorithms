@@ -1,6 +1,8 @@
 #include "sort.h"
 
 
+void swap_node_next(listint_t **list, listint_t **tail, listint_t **cock_shaker);
+void swap_node_prev(listint_t **list, listint_t **tail, listint_t **cock_shaker);
 
 /**
  *cocktail_sort_list - Sort a listint_t doubly-linked list 
