@@ -22,22 +22,18 @@ void quick_sort(int *array, size_t size)
 /**
  *swap_idx - Swaps the indexes inside an array
  *
- *@array: The array to be sorted
  *@idx1: The previous index
  *@idx2: The next index
  *
- *Return: The swapped index
+ *Return: void
  */
 
-size_t swap_idx(int *array, size_t idx1, size_t idx2)
+void swap_idx(int *idx1, int *idx2)
 {
 
-	int temp = array[idx1];
-
-	array[idx1] = array[idx2];
-	array[idx2] = temp;
-
-	return (idx1);
+	int temp = *idx1;
+	*idx1 = *idx2;
+	*idx2 = temp;
 }
 
 /**
@@ -52,28 +48,34 @@ size_t swap_idx(int *array, size_t idx1, size_t idx2)
  *Return: The pivot index
  */
 
-size_t lomuto_partition(int *array, size_t size, size_t left, size_t right)
+int lomuto_partition(int *array, size_t size, int left, int right)
 {
 
-	int pivot = array[right];
-	size_t i = left - 1;
-	size_t j;
+	int *pivot = array + right;
+	int up, down;
 
-	for (j = left; j < right; j++)
+	for (up = down = left; down < right; down++)
 	{
 
-		if (array[j] <= pivot)
+		if (array[down] < *pivot)
 		{
-			i++;
-			swap_idx(array, i, j);
-			print_array(array, size);
+			if (up < down)
+			{
+				swap_idx(array + down, array + up);
+				print_array(array, size);
+			}
+
+			up++;
 		}
 	}
 
-	swap_idx(array, i + 1, right);
-	print_array(array, size);
+	if (array[up] > *pivot)
+	{
+		swap_idx(array + up, pivot);
+		print_array(array, size);
+	}
 
-	return (i + 1);
+	return (up);
 }
 
 /**
@@ -88,15 +90,14 @@ size_t lomuto_partition(int *array, size_t size, size_t left, size_t right)
  *Return: void
  */
 
-void lomuto_sort(int *array, size_t size, size_t left, size_t right)
+void lomuto_sort(int *array, size_t size, int left, int right)
 {
-	size_t idx;
+	int partition;
 
-	if (left < right)
-		idx = lomuto_partition(array, size, left, right);
-
-	if (idx > 0)
-		lomuto_sort(array, size, left, idx - 1);
-
-	lomuto_sort(array, size, idx + 1, right);
+	if (right - left > 0)
+	{
+		partition = lomuto_partition(array, size, left, right);
+		lomuto_sort(array, size, left, partition - 1);
+		lomuto_sort(array, size, partition + 1, right);
+	}
 }

@@ -37,9 +37,9 @@ void heap_sort(int *array, size_t size);
 void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
-size_t swap_idx(int *array, size_t idx1, size_t idx2);
-size_t lomuto_partition(int *array, size_t size, size_t left, size_t right);
-void lomuto_sort(int *array, size_t size, size_t left, size_t right);
+void swap_idx(int *idx1, int *idx2);
+int lomuto_partition(int *array, size_t size, int left, int right);
+void lomuto_sort(int *array, size_t size, int left, int right);
 
 
 #endif/*SORT_H*/
