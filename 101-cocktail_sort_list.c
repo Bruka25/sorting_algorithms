@@ -51,12 +51,12 @@ void cocktail_sort_list(listint_t **list)
 
 /**
  *swap_node_next - Function that swaps a node in a listint_t doubly-linked
-                   list with the node ahead of it
+ *                 list with the node ahead of it
  *
  *@list: Pointer to the head of a doubly-linked list of integers
  *@tail: Pointer to the tail of the doubly-linked list
  *@cock_shaker: Pointer to the current swapping node of the cocktail shaker
-           algorithm
+ *              algorithm
  *
  *Return: Void
  */
@@ -87,7 +87,7 @@ void swap_node_next(listint_t **list, listint_t **tail, listint_t **cock_shaker)
  *@list: Pointer to the head of a doubly-linked list of integers
  *@tail: Pointer to the tail of the doubly-linked list
  *@cock_shaker: Pointer to the current swapping node of
-                the cocktail shaker algorithm
+ *              the cocktail shaker algorithm
  *
  *Return: Void
  */
