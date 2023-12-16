@@ -42,9 +42,12 @@ void swap_idx(int *idx1, int *idx2);
 int lomuto_partition(int *array, size_t size, int left, int right);
 void lomuto_quick_sort(int *array, size_t size, int left, int right);
 
-/*cocktail sorting functions*/
+/*cocktail sorting function helper*/
 void swap_node_next(listint_t **list, listint_t **tail, listint_t **cock_shaker);
 void swap_node_prev(listint_t **list, listint_t **tail, listint_t **cock_shaker);
+
+/*counting sort function helper*/
+int max_int(int *array, int size);
 
 
 #endif/*SORT_H*/
