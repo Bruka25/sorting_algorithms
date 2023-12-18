@@ -56,9 +56,15 @@ void _counting_sort(int *array, size_t size, int sig, int *buff);
 #define UP 0
 #define DOWN 1
 
+/*bitonic sort helper functions*/
 void bito_merge(int *array, size_t size, size_t start, size_t seq,
 		char flow);
 void bito_seq(int *array, size_t size, size_t start, size_t seq, char flow);
+
+/*qiuck sort hoare helper functions*/
+int partition_hoare(int *array, size_t size, int left, int right);
+void sort_quick(int *array, size_t size, int left, int right);
+
 
 
 #endif/*SORT_H*/
