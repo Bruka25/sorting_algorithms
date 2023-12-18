@@ -52,5 +52,13 @@ void bin_heap(int *array, size_t size, size_t base, size_t root);
 /*Radix sort helper function*/
 void _counting_sort(int *array, size_t size, int sig, int *buff);
 
+/*Directional macros for comparison in bitonic sort*/
+#define UP 0
+#define DOWN 1
+
+void bito_merge(int *array, size_t size, size_t start, size_t seq,
+		char flow);
+void bito_seq(int *array, size_t size, size_t start, size_t seq, char flow);
+
 
 #endif/*SORT_H*/
