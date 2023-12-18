@@ -49,5 +49,8 @@ int max_int(int *array, int size);
 /*heap sort function helper*/
 void bin_heap(int *array, size_t size, size_t base, size_t root);
 
+/*Radix sort helper function*/
+void _counting_sort(int *array, size_t size, int sig, int *buff);
+
 
 #endif/*SORT_H*/
